@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+    This HTML file attempts to replicate the look and feel of a classic Web 1.0 personal homepage,
+    circa 1995-1999. Key features include:
+    - Fixed width, centered layout using an old-school table.
+    - Simplified color scheme (White/Dark Gray/Muted Blue).
+    - Use of the <marquee> tag.
+    - Default serif font (Times New Roman).
+    - Low-res image placeholders and a simulated hit counter.
+    - Inline styles and <font> tags (where applicable) for maximum authenticity.
+-->
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Welcome to GEEK-ZONE 4000! :::</title>
+    <!-- We're keeping the layout simple, but toning down the colors. -->
+    <style>
+        /* Base styles for the document - now simplified */
+        body {
+            background-color: #EEEEEE; /* Light Gray/Off-white background */
+            color: #333333; /* Dark Gray text */
+            font-family: 'Times New Roman', Times, serif; /* Classic default font */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* The main container table for fixed-width centered layout */
+        .main-container {
+            width: 768px; /* Classic fixed-width */
+            background-color: #FFFFFF; /* White main content area */
+            border: 3px solid #999999; /* Muted gray border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Headers and links */
+        h1 {
+            color: #006699; /* Muted Deep Blue */
+            font-size: 24pt;
+            text-align: center;
+            border-bottom: 1px solid #CCCCCC; /* Light gray line */
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #660000; /* Muted Deep Red/Maroon */
+            font-size: 18pt;
+            text-align: left;
+            margin-top: 15px;
+            padding-left: 10px;
+        }
+
+        a:link, a:visited {
+            color: #006699; /* Muted Blue links */
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #FF6600; /* Softer Orange hover */
+        }
+
+        /* Classic Web 1.0 elements */
+        .counter {
+            background-color: #F0F0F0;
+            color: #000000;
+            border: 1px solid #999999;
+            padding: 5px;
+            display: inline-block;
+            font-family: monospace;
+            font-size: 14pt;
+        }
+        .placeholder-gif {
+            width: 150px;
+            height: 150px;
+            background-color: #CCCCCC; /* Light gray placeholder */
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #999999;
+        }
+        .under-construction {
+            background-color: #990000; /* Deep Red, less harsh */
+            color: #FFFFFF;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid #333333;
+            margin: 10px 0;
+        }
+
+        /* The scrolling status bar simulation */
+        #status-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #CCCCCC;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            padding: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-top: 1px solid #999999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Center tag is used for centering, as was common before robust CSS -->
+    <center>
+    <!-- Main content container - using a table for layout -->
+    <table class="main-container" cellpadding="15" cellspacing="0">
+        <tr>
+            <td colspan="2">
+                <!-- <h1> - Using an old-school font tag for that bright color -->
+                <h1><font color="#006699">WELCOME TO MY AWESOME GEEK-ZONE!</font></h1>
+
+                <!-- Classic marquee text - kept the colors slightly noticeable but less aggressive -->
+                <marquee behavior="scroll" direction="left" scrollamount="6" style="background-color: #DDDDDD; color: #660000; padding: 5px; border: 1px dashed #999999;">
+                    !!! WARNING: You are entering the COOLEST site on the World Wide Web! Optimized for modern browsers! !!!
+                </marquee>
+
+                <p align="center">
+                    <img src="https://placehold.co/400x150/006699/FFFFFF?text=SITE+BANNER+PLACEHOLDER" alt="Site Banner" border="1" style="border-color: #999999;">
+                </p>
+
+                <p style="text-align: center; font-size: 14pt;">
+                    Hi! I'm Geocities Guru, and this is my digital fortress on the information superhighway.
+                    Check out my interests and please, sign my guestbook before you leave!
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- LEFT NAVIGATION BAR (30% width) -->
+            <td width="30%" valign="top" style="background-color: #F8F8F8; padding: 10px; border-right: 1px solid #CCCCCC;">
+                <p align="center">
+                    <div class="placeholder-gif" style="margin: 0 auto;">
+                        <span style="font-size: 8pt;">Totally Animated 'Under Construction' GIF</span>
+                    </div>
+                </p>
+
+                <h2>NAVIGATION</h2>
+                <ul style="list-style-type: square; padding-left: 20px;">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My RAD Projects</a></li>
+                    <li><a href="#links">Cool Web Rings!</a></li>
+                    <li><a href="mailto:guru@geocities.com">Email Me!</a></li>
+                    <li><a href="#" style="font-weight: bold; color: #990000;">SIGN MY GUESTBOOK!</a></li>
+                </ul>
+
+                <br>
+
+                <h2>SITE STATS</h2>
+                <p>
+                    You are visitor number:
+                    <span id="hitCounter" class="counter">00000</span>
+                    <br><br>
+                    Last Updated: 10/27/97
+                </p>
+                <p class="under-construction">
+                    <font size="+2" color="#FFFFFF">PAGE IS UNDER CONSTRUCTION!</font>
+                </p>
+            </td>
+
+            <!-- RIGHT CONTENT AREA (70% width) -->
+            <td width="70%" valign="top" style="padding: 10px;">
+                <a name="about"></a>
+                <h2>About Me & My Rig</h2>
+                <p>
+                    I'm a totally devoted hobbyist interested in the *bleeding edge* of PC technology. I'm currently running a Pentium 133Mhz with 16MB of RAM and a screaming 4x CD-ROM drive! I just downloaded the latest version of Netscape. The future is NOW!
+                </p>
+
+                <p>
+                    Check out this sweet low-res image of my setup!
+                </p>
+                <p align="center">
+                    <img src="https://placehold.co/320x240/660000/FFFFFF?text=CRT+Monitor+%26+Tower" alt="My Computer Setup" border="1" style="border-color: #999999;">
+                </p>
+
+
+                <a name="projects"></a>
+                <h2>My RAD Projects</h2>
+                <p>
+                    I'm working on a few things right now. My main focus is learning **CGI scripting** (it's the next big thing!) so I can make my guestbook actually save data.
+                </p>
+                <ol>
+                    <li>Animated Mouse Trails (still debugging)</li>
+                    <li>A text-based adventure game in BASIC.</li>
+                    <li>Making a web ring banner exchange!</li>
+                </ol>
+
+                <a name="links"></a>
+                <h2>COOL LINKS & WEB RINGS</h2>
+                <p>
+                    Don't forget to check out these other awesome pages!
+                </p>
+                <p>
+                    <a href="#">The Official Web Developers Page</a><br>
+                    <a href="#">Web Ring: Cool Computer Stuff (Prev)</a><br>
+                    <a href="#">Web Ring: Cool Computer Stuff (Next)</a><br>
+                </p>
+            </td>
+        </tr>
+    </table>
+    </center>
+
+    <!-- Scrolling Status Bar Simulation -->
+    <div id="status-bar">
+        <marquee behavior="scroll" direction="left" scrollamount="1" style="display: inline-block; width: 100%;">
+            Loading... Broadband connection detected. Thank you for visiting!
+        </marquee>
+    </div>
+
+    <script>
+        // Web 1.0 JavaScript to simulate a random hit counter
+        function setHitCounter() {
+            // Generates a random number between 1000 and 99999 for that 'high traffic' feel
+            const randomCount = Math.floor(Math.random() * (99999 - 1000 + 1)) + 1000;
+            const counterElement = document.getElementById('hitCounter');
+            // Pad the number with leading zeros to look like an old-school counter image
+            counterElement.textContent = String(randomCount).padStart(5, '0');
+        }
+
+        window.onload = setHitCounter;
+    </script>
+
+</body>
+</html>
