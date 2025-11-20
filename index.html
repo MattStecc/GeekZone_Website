@@ -1,231 +1,125 @@
 <!DOCTYPE html>
-<!--
-    This HTML file attempts to replicate the look and feel of a classic Web 1.0 personal homepage,
-    circa 1995-1999. Key features include:
-    - Fixed width, centered layout using an old-school table.
-    - Simplified color scheme (White/Dark Gray/Muted Blue).
-    - Use of the <marquee> tag.
-    - Default serif font (Times New Roman).
-    - Low-res image placeholders and a simulated hit counter.
-    - Inline styles and <font> tags (where applicable) for maximum authenticity.
--->
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:Cardinal Bookstore:</title>
-    <!-- We're keeping the layout simple, but toning down the colors. -->
+    <title>Contact Us</title>
     <style>
-        /* Base styles for the document - now simplified */
+        /* Basic CSS for presentation - you would typically put this in a separate style.css file */
         body {
-            background-color: #EEEEEE; /* Light Gray/Off-white background */
-            color: #333333; /* Dark Gray text */
-            font-family: 'Times New Roman', Times, serif; /* Classic default font */
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* The main container table for fixed-width centered layout */
-        .main-container {
-            width: 768px; /* Classic fixed-width */
-            background-color: #FFFFFF; /* White main content area */
-            border: 3px solid #999999; /* Muted gray border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        }
-
-        /* Headers and links */
-        h1 {
-            color: #BA0C2F; /* Cardinal Red */
-            font-size: 24pt;
-            text-align: center;
-            border-bottom: 1px solid #CCCCCC; /* Light gray line */
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: #660000; /* Muted Deep Red/Maroon */
-            font-size: 18pt;
-            text-align: left;
-            margin-top: 15px;
-            padding-left: 10px;
-        }
-
-        a:link, a:visited {
-            color: #006699; /* Muted Blue links */
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #FF6600; /* Softer Orange hover */
-        }
-
-        /* Classic Web 1.0 elements */
-        .counter {
-            background-color: #F0F0F0;
-            color: #000000;
-            border: 1px solid #999999;
-            padding: 5px;
-            display: inline-block;
-            font-family: monospace;
-            font-size: 14pt;
-        }
-        .placeholder-gif {
-            width: 150px;
-            height: 150px;
-            background-color: #CCCCCC; /* Light gray placeholder */
-            color: #333333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: bold;
-            border: 1px solid #999999;
-        }
-        .under-construction {
-            background-color: #990000; /* Deep Red, less harsh */
-            color: #FFFFFF;
-            padding: 5px;
-            text-align: center;
-            font-weight: bold;
-            border: 2px solid #333333;
-            margin: 10px 0;
-        }
-
-        /* The scrolling status bar simulation */
-        #status-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #CCCCCC;
-            color: #000000;
             font-family: Arial, sans-serif;
-            font-size: 10px;
-            padding: 2px;
-            white-space: nowrap;
-            overflow: hidden;
-            border-top: 1px solid #999999;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        .contact-section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .map-container {
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- Center tag is used for centering, as was common before robust CSS -->
-    <center>
-    <!-- Main content container - using a table for layout -->
-    <table class="main-container" cellpadding="15" cellspacing="0">
-        <tr>
-            <td colspan="2">
-                <!-- <h1> - Using an old-school font tag for that bright color -->
-                <h1><font color="#BA0C2F">Cardinal Bookstore</font></h1>
+<div class="container">
+    <h1>Contact Us</h1>
 
-                <!-- Classic marquee text - kept the colors slightly noticeable but less aggressive -->
-                <marquee behavior="scroll" direction="left" scrollamount="6" style="background-color: #DDDDDD; color: #660000; padding: 5px; border: 1px dashed #999999;">
-                    !!! WARNING: You are entering the COOLEST Bookstore on the World Wide Web! !!!
-                </marquee>
+    <div class="contact-section">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="message_subject">
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message" rows="6" required></textarea>
+            </div>
+            <button type="submit">Submit Message</button>
+        </form>
+    </div>
+    
+    <hr>
 
-                <p align="center">
-                    <img src="https://content.sportslogos.net/logos/30/612/full/ball_state_cardinals_logo_primary_1965_sportslogosnet-6229.png" alt="Site Banner" style="width: 50px; height: 60px;">
-                </p>
+    <div class="contact-section">
+        <h2>Our Details</h2>
+        <p>Feel free to reach out to us using the details below:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a> (Replace with your email)</li>
+            <li><strong>Phone:</strong> (555) 123-4567 (Replace with your phone number)</li>
+            <li><strong>Address:</strong> 123 Web Street, GitHub City, CA 90210 (Replace with your address)</li>
+        </ul>
+    </div>
+    
+    <hr>
 
-                <p style="text-align: center; font-size: 14pt;">
-                    Hi! This is the new and improved Web 1.0 library! You can check out book storage online. 
-                    Links to books down below
-                </p>
-            </td>
-        </tr>
-
-        <tr>
-            <!-- LEFT NAVIGATION BAR (30% width) -->
-            <td width="30%" valign="top" style="background-color: #F8F8F8; padding: 10px; border-right: 1px solid #CCCCCC;">
-                <p align="center">
-                    <div class="" style="margin: 0 auto;">
-                        <span style="font-size: 8pt;"></span>
-                    </div>
-                </p>
-
-                <h2>NAVIGATION</h2>
-                <ul style="list-style-type: square; padding-left: 20px;">
-                    <li><a href="#" style="font-weight: underline; color: #006699;">In Store Books</a></li>
-                    <li><a href="#" style="font-weight: underline; color: #006699;">Order Books</a></li>
-                    <li><a href="#" style="font-weight: underline; color: #006699;">Monthly Subscription</a></li>
-                    <li><a href="#" style="font-weight: underline; color: #006699;">Email Our Store!</a></li>
-                    <li><a href="#" style="font-weight: underline; color: #006699;">Cardinal Background</a></li>
-                </ul>
-
-                <br>
-
-                <h2>SITE STATS</h2>
-                <p>
-                    You are visitor number:
-                    <span id="hitCounter" class="counter">00000</span>
-                    <br><br>
-                    Last Updated: 11/5/25
-                </p>
-                <p class="under-construction">
-                    <font size="+2" color="#FFFFFF">CHIRP CHIRP!</font>
-                </p>
-            </td>
-
-            <!-- RIGHT CONTENT AREA (70% width) -->
-            <td width="70%" valign="top" style="padding: 10px;">
-                <a name="about"></a>
-                <h2><font Mission Statement</font></h1>
-                <p>
-                    Our mission as a Book Store is to have education in literature available for people of all ages. Our main audience is the current student base attending Ball State University.
-                </p>
-
-                <p>
-                    Our Staff
-                </p>
-                <p align="center">
-                    <img src="https://www.bsu.edu/-/media/www/departmentalcontent/bsufoundation/images/giving-and-engagement/students.png?sc_lang=en" alt="Staff" border="1" style="border-color: #999999;">
-                </p>
-
-
-                <a name="projects"></a>
-                <h2><font Genres</font></h1>
-                <p>
-                    We've got all genres and authors. We don't only provide textbooks, but we also have stories to pass time and explore new endeavors. Some Examples are ...
-                </p>
-                <ol>
-                    <li>Economic Text Books</li>
-                    <li>Phsycology Text Books</li>
-                    <li>Music Theory Text books</li>
-                </ol>
-
-                <a name="links"></a>
-                <h2><font color="#BA0C2F"Important Links</font></h1>
-                <p>
-                    Don't forget to check out these other awesome pages!
-                </p>
-                <p>
-                    <a href="#">Other Store Locations</a><br>
-                    <a href="#">Store Manager</a><br>
-                    <a href="#">Merchandise Store Location</a><br>
-                </p>
-            </td>
-        </tr>
-    </table>
-    </center>
-
-    <!-- Scrolling Status Bar Simulation -->
-    <div id="status-bar">
-        <marquee behavior="scroll" direction="left" scrollamount="1" style="display: inline-block; width: 100%;">
-            Loading... Broadband connection detected. Thank you for visiting!
-        </marquee>
+    <div class="contact-section map-container">
+        <h2>Find Us</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.221541810486!2d144.9630579153163!3d-37.81627997975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b991b1f637%3A0x5045675218d8e50!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4f13.1" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location on Map">
+        </iframe>
     </div>
 
-    <script>
-        // Web 1.0 JavaScript to simulate a random hit counter
-        function setHitCounter() {
-            // Generates a random number between 1000 and 99999 for that 'high traffic' feel
-            const randomCount = Math.floor(Math.random() * (99999 - 1000 + 1)) + 1000;
-            const counterElement = document.getElementById('hitCounter');
-            // Pad the number with leading zeros to look like an old-school counter image
-            counterElement.textContent = String(randomCount).padStart(5, '0');
-        }
-
-        window.onload = setHitCounter;
-    </script>
+</div>
 
 </body>
 </html>
